@@ -1,0 +1,37 @@
+YAML file sample
+rc-Replication.yml
+    {   
+    apiVersion: v1
+    kind: ReplicationController
+    metadata:
+        name: myapp-rc 
+        labels:
+            app: myapp 
+            type: front-end
+    spec:
+        template:
+        
+            metadata:
+                name: myapp-pod
+                labels:
+                app: myapp 
+                type: front-end 
+            spec:
+                containers:
+                    name: nginx-container 
+                    image: nginx
+    replicas: 3
+    }
+
+pod-defintion.yml
+    {
+        apiVersion: v1
+        kind: Pod
+    }
+
+Command
+    kubectl create -f rc-defintion.yml
+    kubectl get replicaset
+    kubectl replace -f replicaset-defintion.yml
+    kubectl scale --replicas=6 -f replicaset-definition.yml
+    kubectl scale --replicas=6 replicaset myapp-replicaset

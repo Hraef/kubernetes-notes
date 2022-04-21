@@ -1,0 +1,5 @@
+decides which pods go on each node
+
+1. Filter nodes based on profile(CPU and memory resources)
+2. Rank Nodes(best fit for pod from 0-10)
+can be customized

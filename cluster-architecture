@@ -1,0 +1,33 @@
+Cluster Architecture
+
+Worker Nodes
+    - host applications as containers
+    - handle networking between apps across the     cluster and from outside the cluster
+
+Master 
+    - manage
+    - plan
+    - schedule
+    - monitor
+
+ETCD Cluster
+    - stores info in key data format
+
+Kube scheduler
+    - identifies right node to place container on based on resource requiremnts, rules and configurations
+
+Controller manager
+    node controller
+        - nodes
+        - onboarding new nodes to cluster
+    replication contoller
+        - required # of containers at all times
+
+Kube API server
+    - primary managemnt component
+    - orchestrate all operations in cluster
+    - used by external users for management
+    - changes and maintenance
+
+kube proxy service
+    - ensures containers can reach other

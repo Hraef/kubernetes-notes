@@ -1,0 +1,17 @@
+manages various controllers in kubernetes
+
+Node Controller
+    - watch status
+    - remediate situation
+    node monitor period = 5s
+    node monitor grace period = 40s
+    POD eviction timeout = 5m
+    view nodes
+        kubectl get nodes
+
+Replication controller
+    - monitors for proper number of pods in environment at all times
+    - adds and removes pods
+
+view kube-controller-manager-kubeadm
+    kubectl get pods -n kube-system

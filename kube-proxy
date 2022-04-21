@@ -1,0 +1,6 @@
+creates rules to route traffic
+create ip table rules
+
+view kube-proxy
+    kubectl get pods -n kube-system
+    kubectl get daemonset -n kube-system

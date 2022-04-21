@@ -1,0 +1,21 @@
+enable comms between various components within kubernetes
+listen to port and forward traffic
+valid range for ports is 30000 - 32767
+service-definition.yml
+service run inside node between pod and node
+service can span across multiple nodes and multiple pods
+
+Types
+    Node port  
+        makes inrernal port open on Node
+        starts at point 1 on pod, then hits port on service, then hits internal port of Node. used to access web externally
+        [command]
+            kubectl create -f service-definition.yml
+            kubectl get services
+            curl http://192.168.1.2:30008
+
+    Cluster IP
+        creates virtual ip inside server to comm with front and back end servers
+        
+    load balancer
+        distribute load across cloud deployments

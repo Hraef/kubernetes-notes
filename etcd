@@ -1,0 +1,18 @@
+Key-Value Store
+    - object storage
+    - default port 2379
+    - Install
+        Download Binaries: 
+            curl -L "https:"
+        Extract: 
+            tar xzvf etcd-v3.3.11-linux-amd64.tar.gz
+        Run ETCD Service: 
+            ./etcd
+    - store and retrieve key value pair
+        Store value: ./etcd1 set key1 value1
+        Get value: ./etcd1 get key1
+            retruns: value1
+    - setup kubeadm
+        kubectl get pods -n kube-system 
+    - list keys in ETCD
+        etcdctl get / --prefix -keys-only

@@ -1,0 +1,26 @@
+commands
+    kubectl create -f deployment-definition.yml
+    kubectl get deployments
+    kubectl get replicaset
+    kubectl get all
+
+
+
+    shortcut commands
+    [Create NGINX pod]
+        kubectl run nginx --image=nginx
+
+    [generate pod manifest yaml file(-o yaml). dont create it]
+        kubectl run nginx --image=nginx --dry-run=client -o yaml
+
+    [create deployment]
+        kubectl create deployment --image=nginx nginx
+
+    [generate deployment file, dont create]
+        kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+
+    [generate deployment file, dont create(4 replicas)]
+        kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
+
+    [save to file]
+        kubectl create -f nginx-deployment.yaml
